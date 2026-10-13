@@ -1,2 +1,628 @@
-# DUA-ACADEMY
-Dua Academy gives you a bright future 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dua Academy | Bright Future Starts Here</title>
+
+    <meta name="description"
+          content="Welcome to Dua Academy near Mehmood Booti Station, Lahore. Learn English, Computer Science, Mathematics, Chemistry, Urdu and Islamiat.">
+
+    <style>
+        /* GENERAL STYLING */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #243047;
+            background: #f7f9fc;
+        }
+
+        :root {
+            --navy: #102a43;
+            --blue: #1769aa;
+            --gold: #f4bd50;
+            --white: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--navy);
+            color: var(--white);
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 490px;
+            padding: 85px 8%;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(120deg,
+                rgba(16, 42, 67, 0.97),
+                rgba(23, 105, 170, 0.86));
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero-label {
+            color: var(--gold);
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 66px);
+            line-height: 1.15;
+            margin: 20px 0;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 620px;
+            margin-bottom: 30px;
+            color: #e5edf5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 5px 8px 5px 0;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--navy);
+        }
+
+        /* COMMON SECTIONS */
+        section {
+            padding: 70px 8%;
+            scroll-margin-top: 20px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: clamp(28px, 4vw, 38px);
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #65758b;
+        }
+
+        .gold-line {
+            width: 65px;
+            height: 4px;
+            background: var(--gold);
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+
+        /* PRINCIPAL */
+        .principal-section {
+            background: white;
+        }
+
+        .principal-card {
+            max-width: 700px;
+            margin: auto;
+            padding: 35px;
+            text-align: center;
+            background: #f0f6fc;
+            border-radius: 15px;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .principal-icon {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 18px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--gold);
+            font-size: 34px;
+        }
+
+        .principal-card h3 {
+            font-size: 25px;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        /* TEACHERS */
+        .teachers-section {
+            background: #f7f9fc;
+        }
+
+        .teacher-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .teacher-card {
+            background: white;
+            padding: 27px 18px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(16, 42, 67, 0.07);
+            border: 1px solid #e9eef4;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 28px rgba(16, 42, 67, 0.12);
+        }
+
+        .teacher-icon {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .teacher-card h3 {
+            color: var(--navy);
+            font-size: 19px;
+            margin-bottom: 5px;
+        }
+
+        .teacher-card p {
+            color: #65758b;
+            font-size: 14px;
+        }
+
+        /* WHY CHOOSE US */
+        .features-section {
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .feature {
+            padding: 25px;
+            background: #f7f9fc;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature span {
+            font-size: 32px;
+        }
+
+        .feature h3 {
+            margin: 12px 0;
+            color: var(--navy);
+        }
+
+        /* CALL TO ACTION */
+        .cta {
+            background: var(--blue);
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 22px;
+            color: #e7f2fc;
+        }
+
+        /* CONTACT */
+        .contact-section {
+            background: #f7f9fc;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(16, 42, 67, 0.06);
+        }
+
+        .contact-card h3 {
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            margin-bottom: 12px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-card a {
+            color: var(--blue);
+            font-weight: bold;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 25px 8%;
+            text-align: center;
+            background: var(--navy);
+            color: #dce6f0;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: var(--gold);
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 800px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 65px 7%;
+                min-height: 420px;
+            }
+
+            .teacher-grid,
+            .features-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 520px) {
+            section {
+                padding: 50px 6%;
+            }
+
+            .teacher-grid,
+            .features-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .principal-card {
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a class="logo" href="#home">Dua Academy</a>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#principal">Principal</a>
+            <a href="#teachers">Teachers</a>
+            <a href="#about">Why Us?</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- WELCOME SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-label">Welcome to Dua Academy</div>
+
+                <h1>Build Your Future.<br>
+                    <span>Achieve Your Dreams.</span>
+                </h1>
+
+                <p>
+                    Education is the key to success. At Dua Academy,
+                    learning is a step towards knowledge, confidence
+                    and a brighter future.
+                </p>
+
+                <a class="btn btn-primary"
+                   href="#contact">Join Dua Academy</a>
+
+                <a class="btn btn-outline"
+                   href="#teachers">Meet Our Teachers</a>
+            </div>
+        </section>
+
+        <!-- PRINCIPAL SECTION -->
+        <section class="principal-section" id="principal">
+            <div class="section-heading">
+                <h2>Message from Our Leadership</h2>
+                <div class="gold-line"></div>
+                <p>Guidance, dedication and a vision for success.</p>
+            </div>
+
+            <div class="principal-card">
+                <div class="principal-icon" aria-hidden="true">🎓</div>
+
+                <h3>Sir Shahid</h3>
+                <p><strong>Principal, Dua Academy</strong></p>
+
+                <p>
+                    Our principal, Sir Shahid, leads Dua Academy with
+                    a commitment to education and student development.
+                    Our goal is to encourage students to learn,
+                    improve their skills and work towards their goals.
+                </p>
+            </div>
+        </section>
+
+        <!-- TEACHERS SECTION -->
+        <section class="teachers-section" id="teachers">
+            <div class="section-heading">
+                <h2>Meet Our Teachers</h2>
+                <div class="gold-line"></div>
+                <p>Learn from our dedicated subject teachers.</p>
+            </div>
+
+            <div class="teacher-grid">
+
+                <article class="teacher-card">
+                    <div class="teacher-icon" aria-hidden="true">📘</div>
+                    <h3>Sir Aqib</h3>
+                    <p>English Teacher</p>
+                </article>
+
+                <article class="teacher-card">
+                    <div class="teacher-icon" aria-hidden="true">💻</div>
+                    <h3>Sir Ali</h3>
+                    <p>Computer Science Teacher</p>
+                </article>
+
+                <article class="teacher-card">
+                    <div class="teacher-icon" aria-hidden="true">📚</div>
+                    <h3>Sir Asim</h3>
+                    <p>Urdu Teacher</p>
+                </article>
+
+                <article class="teacher-card">
+                    <div class="teacher-icon" aria-hidden="true">🧪</div>
+                    <h3>Sir Zeeshan</h3>
+                    <p>Chemistry Teacher</p>
+                </article>
+
+                <article class="teacher-card">
+                    <div class="teacher-icon" aria-hidden="true">🌙</div>
+                    <h3>Miss Ruqaya</h3>
+                    <p>Islamiat Teacher</p>
+                </article>
+
+                <article class="teacher-card">
+                    <div class="teacher-icon" aria-hidden="true">📐</div>
+                    <h3>Sir Ahmer</h3>
+                    <p>Mathematics Teacher</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="features-section" id="about">
+            <div class="section-heading">
+                <h2>Why Choose Dua Academy?</h2>
+                <div class="gold-line"></div>
+                <p>A place to learn, grow and move forward.</p>
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature">
+                    <span aria-hidden="true">📖</span>
+                    <h3>Quality Education</h3>
+                    <p>
+                        Develop your knowledge and strengthen
+                        your understanding of different subjects.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <span aria-hidden="true">👨‍🏫</span>
+                    <h3>Dedicated Teachers</h3>
+                    <p>
+                        Learn with guidance and support from
+                        our subject teachers.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <span aria-hidden="true">🌟</span>
+                    <h3>Bright Future</h3>
+                    <p>
+                        Build confidence, improve your abilities
+                        and work towards academic success.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- JOIN US -->
+        <section class="cta">
+            <h2>Join Dua Academy for Your Bright Future!</h2>
+
+            <p>
+                Take the next step in your educational journey.
+                Start learning and working towards your dreams today.
+            </p>
+
+            <a class="btn btn-primary"
+               href="#contact">Contact Us Today</a>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section" id="contact">
+            <div class="section-heading">
+                <h2>Contact Dua Academy</h2>
+                <div class="gold-line"></div>
+                <p>We look forward to welcoming you.</p>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+                    <h3>📍 Our Location</h3>
+
+                    <p>
+                        Dua Academy,<br>
+                        Near Mehmood Booti Station,<br>
+                        Lahore, Pakistan
+                    </p>
+
+                    <a
+                       href="https://www.google.com/maps/search/?api=1&query=Dua+Academy+near+Mehmood+Booti+Station+Lahore"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Find Us on Google Maps →
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <h3>📞 Get in Touch</h3>
+
+                    <p>
+                        Phone:
+                        <a href="tel:+923104051262">
+                            0310-4051262
+                        </a>
+                    </p>
+
+                    <p>
+                        Have questions about joining our academy?
+                        Contact us by phone or WhatsApp.
+                    </p>
+
+                    <a
+                       href="https://wa.me/923104051262"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Chat with Us on WhatsApp →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © <span id="year">2026</span>
+            <strong>Dua Academy</strong>.
+            All rights reserved.
+        </p>
+
+        <p>Join Dua Academy for Your Bright Future!</p>
+    </footer>
+
+    <script>
+        // Automatically update the copyright year.
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html
